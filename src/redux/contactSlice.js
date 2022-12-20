@@ -33,7 +33,7 @@ const contactsSlice = createSlice({
       state.contacts.isLoading = true;
     },
     [addContact.fulfilled](state, action) {
-      state.contacts.items = action.payload;
+      state.contacts.items.push(action.payload);
       state.contacts.isLoading = false;
       state.contacts.error = null;
     },
@@ -58,25 +58,6 @@ const contactsSlice = createSlice({
     },
   },
   reducers: {
-    //  addContact: {
-    //    reducer(state, action) {
-    //      state.contacts.push(action.payload);
-    //    },
-    //    prepare(name, number) {
-    //      return {
-    //        payload: {
-    //          name,
-    //          id: shortid.generate(),
-    //          number,
-    //        },
-    //      };
-    //    },
-    //  },
-    //  removeContact(state, action) {
-    //    state.contacts = state.contacts.filter(
-    //      contact => contact.id !== action.payload
-    //    );
-    //  },
     setFilter(state, action) {
       state.filter = action.payload;
     },

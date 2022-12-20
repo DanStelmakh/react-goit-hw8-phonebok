@@ -1,16 +1,18 @@
 import styled from 'styled-components';
-export const List = styled.ol`
-  padding: 0;
+export const List = styled.ul`
+  padding: 10px;
+  border: transparent;
+  border-radius: 15px;
+  box-shadow: inset 0px 0px 88px 24px rgba(255, 162, 0, 0.5);
 `;
 
 export const Item = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 400px;
+  width: 250px;
 
   padding: 10px;
-  border-bottom: 2px dotted blue;
 `;
 
 export const Btn = styled.button`

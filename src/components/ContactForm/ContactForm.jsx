@@ -1,16 +1,15 @@
 import React from 'react';
 import { useState } from 'react';
 import { addContact } from 'redux/operations';
+import { useDispatch } from 'react-redux';
 import { ReactComponent as IconTel } from '../../icons/telephone.svg';
 import { ReactComponent as IconAdd } from '../../icons/add-user.svg';
-
 import {
   Form,
   Input,
   Btn,
   Txt,
 } from 'components/ContactForm/ContactForm.styled';
-import { useDispatch } from 'react-redux';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
@@ -34,6 +33,7 @@ export const ContactForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
+
     dispatch(addContact({ name, number }));
     setName('');
     setNumber('');

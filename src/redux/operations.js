@@ -38,3 +38,14 @@ export const removeContact = createAsyncThunk(
     }
   }
 );
+
+// export const filterContacts = createAsyncThunk(
+//   'contacts/filterContacts',
+//   async (_, thunkAPI) => {
+//     try {
+//       await axios.get(`contacts`);
+//     } catch (e) {
+//       return thunkAPI.rejectWithValue(e.message);
+//     }
+//   }
+// );

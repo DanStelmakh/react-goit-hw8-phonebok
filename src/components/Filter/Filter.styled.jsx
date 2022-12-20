@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
-export const FilterTitle = styled.span`
-  margin-right: 15px;
+export const FilterTitle = styled.div`
+  margin-bottom: 10px;
 `;

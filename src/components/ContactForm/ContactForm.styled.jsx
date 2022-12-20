@@ -2,8 +2,13 @@ import styled from 'styled-components';
 
 export const Form = styled.form`
   display: flex;
+  align-items: center;
   gap: 15px;
   flex-direction: column;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: inset 0px 0px 88px 24px rgba(255, 162, 0, 0.5);
 `;
 export const Input = styled.input`
   font-size: 15px;
@@ -16,6 +21,7 @@ export const Input = styled.input`
   }
 `;
 export const Btn = styled.button`
+  width: 100px;
   padding: 10px;
   border-radius: 15px;
   border-color: transparent;

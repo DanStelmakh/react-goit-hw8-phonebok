@@ -11,14 +11,17 @@ export const Filter = () => {
     dispatch(setFilter(e.currentTarget.value));
   };
   return (
-    <label>
-      <FilterTitle>Find contacts by name:</FilterTitle>
-      <Input
-        type="text"
-        name="filter"
-        placeholder="Enter name"
-        onChange={onChange}
-      ></Input>
-    </label>
+    <>
+      <h2>Contacts</h2>
+      <label>
+        <FilterTitle>Find contacts by name:</FilterTitle>
+        <Input
+          type="text"
+          name="filter"
+          placeholder="Enter name"
+          onChange={onChange}
+        ></Input>
+      </label>
+    </>
   );
 };

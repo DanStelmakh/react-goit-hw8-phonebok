@@ -10,10 +10,11 @@ export const App = () => {
     <Container>
       <h1>Phonebook</h1>
       <ContactForm></ContactForm>
-      <h2>Contacts</h2>
-      <Filter></Filter>
-      <ContactList></ContactList>
       <TotalContacts />
+
+      <Filter></Filter>
+
+      <ContactList></ContactList>
     </Container>
   );
 };
