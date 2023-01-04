@@ -10,6 +10,9 @@ import {
   Btn,
   Txt,
 } from 'components/ContactForm/ContactForm.styled';
+import { Filter } from 'components/Filter/Filter';
+import { TotalContacts } from 'components/TotalContacts/TotalContacts';
+import { ContactList } from 'components/ContactList/ContactList';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
@@ -68,6 +71,10 @@ export const ContactForm = () => {
         required
       />
       <Btn type="submit">Add contact</Btn>
+
+      <ContactList />
+      <TotalContacts />
+      <Filter />
     </Form>
   );
 };

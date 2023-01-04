@@ -5,6 +5,7 @@ import { PacmanLoader } from 'react-spinners';
 
 export const TotalContacts = () => {
   const contacts = useSelector(getContacts);
+
   const isLoading = useSelector(getIsLoading);
   const error = useSelector(getError);
   return (
