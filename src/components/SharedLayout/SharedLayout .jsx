@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-// import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import { Link, Outlet } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -31,15 +30,22 @@ export const SharedLayout = () => {
           <Grid
             container
             direction="row"
-            justifyContent="space-between"
+            justifyContent="space-evenly"
             alignItems="center"
           >
             <Link to="/" variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              My PhoneBook
+              Home
             </Link>
+            {/* <Link
+              to="contacts"
+              variant="h6"
+              component="div"
+              sx={{ flexGrow: 1 }}
+            >
+              My PhoneBook
+            </Link> */}
+
             {isLoggedIn ? <UserMenu /> : <AuthMenu />}
-            {/* <Link to="/login">Login</Link>
-            <Link to="/register">Register</Link> */}
           </Grid>
         </Toolbar>
       </AppBar>

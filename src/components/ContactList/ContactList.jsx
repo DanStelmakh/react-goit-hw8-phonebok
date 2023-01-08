@@ -10,33 +10,19 @@ export const ContactList = () => {
 
   const visibleContacts = useSelector(getVisibleContacts);
 
-  //   const contactList = useSelector(getContacts);
-  //   const filter = useSelector(getFilter);
-
-  //   function getFiltredContacts() {
-  //     if (!filter) {
-  //       return contactList;
-  //     }
-  //     const normalizedFilter = filter.toLowerCase();
-  //     return contactList.filter(contact =>
-  //       contact.name.toLowerCase().includes(normalizedFilter)
-  //     );
-  //   }
-  //   const visibleContacts = getFiltredContacts();
-  //   console.log(visibleContacts);
-
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
 
   return (
     <>
+      <h2>My Contacts</h2>
       <List>
         {visibleContacts.map(contact => (
           <Item key={contact.id}>
             <div>
               <div>{contact.name}</div>
-              <dispatchEvent>{contact.number}</dispatchEvent>
+              <div>{contact.number}</div>
             </div>
             <Btn
               type="button"

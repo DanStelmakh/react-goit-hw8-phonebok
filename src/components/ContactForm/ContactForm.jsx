@@ -43,6 +43,7 @@ export const ContactForm = () => {
   };
   return (
     <Form onSubmit={handleSubmit}>
+      <h1>My PhoneBook</h1>
       <Txt>
         Name <IconAdd width="20px" height="20px" />
       </Txt>

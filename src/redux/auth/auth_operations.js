@@ -51,15 +51,15 @@ export const getCurrentUSer = createAsyncThunk(
   async (_, thunkAPI) => {
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
-    //  console.log(thunkAPI.getState());
-    if (persistedToken) {
-      token.set(persistedToken);
-      try {
-        const response = await axios.get('users/current');
-        return response.data;
-      } catch (e) {
-        return thunkAPI.rejectWithValue(e.message);
-      }
+    if (!persistedToken) return thunkAPI.rejectWithValue(`No valids token!`);
+
+    token.set(persistedToken);
+
+    try {
+      const response = await axios.get('users/current');
+      return response.data;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
     }
   }
 );

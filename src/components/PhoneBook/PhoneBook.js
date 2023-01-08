@@ -7,8 +7,8 @@ export const PhoneBook = () => {
   return (
     <>
       <ContactForm />
-      <ContactList />
       <Filter />
+      <ContactList />
       <TotalContacts />
     </>
   );
