@@ -17,12 +17,14 @@ const authSlice = createSlice({
       state.token = action.payload.token;
       state.isLoggedIn = true;
     },
+
     //  logIn
     [logIn.fulfilled](state, action) {
       state.user = action.payload.user;
       state.token = action.payload.token;
       state.isLoggedIn = true;
     },
+
     //logOut
     [logOut.fulfilled](state) {
       state.user = { name: null, email: null };
@@ -30,9 +32,15 @@ const authSlice = createSlice({
       state.isLoggedIn = false;
     },
     //refresh
+    [getCurrentUSer.pending](state) {
+      state.isRefreshing = true;
+    },
     [getCurrentUSer.fulfilled](state, action) {
       state.user = action.payload;
       state.isLoggedIn = true;
+    },
+    [getCurrentUSer.rejected](state) {
+      state.isRefreshing = false;
     },
   },
 });

@@ -19,8 +19,8 @@ export const UserMenu = () => {
   const dispatch = useDispatch();
   return (
     <ThemeProvider theme={theme}>
-      <div>
-        <p>Welcome, {name}</p>
+      <div stylr={{ display: 'flex', alignItems: 'center' }}>
+        <p style={{ marginRight: 10 }}>Welcome, {name}</p>
         <Button
           startIcon={<LogoutIcon />}
           variant="contained"
